@@ -34,4 +34,12 @@ public class Student implements Serializable {
 		super();
 		System.out.println("Constructeur de Student");
 	}
+	
+	public void myInitMethod() {
+		System.out.println("myInitMethod");
+	}
+	
+	public void myDestroyMethod() {
+		System.out.println("myDestroyMethod");
+	}
 }

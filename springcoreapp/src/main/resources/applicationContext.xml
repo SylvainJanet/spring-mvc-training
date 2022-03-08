@@ -20,7 +20,8 @@
 	<!--<bean id="employee" class="springcoreapp.o2ioc.Employee"> <constructor-arg 
 		value="10" type="long"></constructor-arg> </bean> -->
 
-	<bean id="addressBean" class="springcoreapp.o2ioc.Address">
+	<bean id="addressBean" class="springcoreapp.o2ioc.Address"
+		autowire-candidate="false">
 		<constructor-arg value="Paris"></constructor-arg>
 		<constructor-arg value="Ile-de-France"></constructor-arg>
 		<constructor-arg value="France"></constructor-arg>
@@ -116,7 +117,8 @@
 		<constructor-arg value="Lionel"></constructor-arg>
 	</bean>
 
-	<bean id="address2" class="springcoreapp.o2ioc.Address">
+	<bean id="address2" class="springcoreapp.o2ioc.Address"
+		autowire-candidate="false">
 		<constructor-arg value="Toulouse"></constructor-arg>
 		<constructor-arg value="Occitanie"></constructor-arg>
 		<constructor-arg value="TBD"></constructor-arg>
@@ -128,42 +130,49 @@
 		<property name="name">
 			<value>Tahmi</value>
 		</property>
-		<!-- 
-		<property ....>
-			<value>
-				<list>
-					....
-				</list>
-				</value>
-		</property>
-		écrase la liste définie dans le parent
-		On peut vouloir ajouter des valeurs à ce qui a été défini dans le parent
-		Pour cela :
-		<property ....>
-			<value>
-				<list merge="true">
-					....
-				</list>
-				</value>
-		</property>
-		Même chose pour les maps
-		 -->
+		<!-- <property ....> <value> <list> .... </list> </value> </property> écrase 
+			la liste définie dans le parent On peut vouloir ajouter des valeurs à ce 
+			qui a été défini dans le parent Pour cela : <property ....> <value> <list 
+			merge="true"> .... </list> </value> </property> Même chose pour les maps -->
 	</bean>
-	
-	<!--  GIT GIT GIT GIT GIT GIT GIT -->
-	<!--  GIT GIT GIT GIT GIT GIT GIT -->
-	<!--  GIT GIT GIT GIT GIT GIT GIT -->
-	<!--  GIT GIT GIT GIT GIT GIT GIT -->
-	<!--  GIT GIT GIT GIT GIT GIT GIT -->
-	<!--  GIT GIT GIT GIT GIT GIT GIT -->
-	<!--  GIT GIT GIT GIT GIT GIT GIT -->
-	<!--  GIT GIT GIT GIT GIT GIT GIT -->
-	<!--  GIT GIT GIT GIT GIT GIT GIT -->
-	<!--  GIT GIT GIT GIT GIT GIT GIT -->
-	<!--  GIT GIT GIT GIT GIT GIT GIT -->
-	<!--  GIT GIT GIT GIT GIT GIT GIT -->
-	<!--  GIT GIT GIT GIT GIT GIT GIT -->
-	<!--  GIT GIT GIT GIT GIT GIT GIT -->
-	
+
+
+	<bean id="otherstudent" class="springcoreapp.o2ioc.Student">
+		<constructor-arg value="blablabla"></constructor-arg>
+		<property name="studentName">
+			<value>Axel</value>
+			<!-- Tout ce qu'on a vu sur les listes, les maps, les passages de référence 
+				s'applique ici aussi de la même manière -->
+		</property>
+	</bean>
+
+	<bean id="studentprototype" class="springcoreapp.o2ioc.Student"
+		scope="prototype">
+		<constructor-arg value="Je suis un prototype"></constructor-arg>
+	</bean>
+
+	<bean id="studentinit" class="springcoreapp.o2ioc.Student"
+		init-method="myInitMethod" destroy-method="myDestroyMethod">
+		<constructor-arg
+			value="J'ai des méthodes init et destroy"></constructor-arg>
+	</bean>
+
+	<bean id="address" class="springcoreapp.o2ioc.Address">
+		<constructor-arg value="Strasbourg"></constructor-arg>
+		<constructor-arg value="Alsace"></constructor-arg>
+		<constructor-arg value="France"></constructor-arg>
+	</bean>
+
+	<bean id="citoyenByName" class="springcoreapp.o2ioc.Citoyen"
+		autowire="byName">
+		<constructor-arg value="10" type="long"></constructor-arg>
+		<constructor-arg value="Helmutz"></constructor-arg>
+	</bean>
+
+	<bean id="citoyenByType" class="springcoreapp.o2ioc.Citoyen"
+		autowire="byType">
+		<constructor-arg value="15" type="long"></constructor-arg>
+		<constructor-arg value="Hila"></constructor-arg>
+	</bean>
 
 </beans>
