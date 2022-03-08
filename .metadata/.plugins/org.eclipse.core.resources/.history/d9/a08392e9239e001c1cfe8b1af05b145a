@@ -1,0 +1,32 @@
+package springcoreapp.o2ioc;
+
+import java.io.Serializable;
+
+public class Employee implements Serializable{
+
+	private long id;
+	private String name;
+	
+	public Employee() {
+		super();
+		System.out.println("Constructeur de Employee sans paramètres");
+	}
+	public Employee(long id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+		System.out.println("Constructeur de Employee avec 2 params");
+	}
+	public Employee(long id) {
+		super();
+		this.id = id;
+		System.out.println("Constructeur de Employee avec 1 param : id");
+	}
+	public Employee(String name) {
+		super();
+		this.name = name;
+		System.out.println("Constructeur de Employee avec 1 param : name");
+	}
+	
+	
+}

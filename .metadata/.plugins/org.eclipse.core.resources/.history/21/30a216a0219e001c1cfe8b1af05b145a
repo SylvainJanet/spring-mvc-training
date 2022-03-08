@@ -1,0 +1,26 @@
+package springcoreapp.o2ioc;
+
+import java.io.Serializable;
+
+// On manipule des POJO 
+// on a besoin de getters setters, d'un constructeur sans paramètres et 
+// implémente Serializable
+public class Student implements Serializable {
+
+	private static final long serialVersionUID = 4759438525564105689L;
+	
+	private String studentName;
+
+	public String getStudentName() {
+		return studentName;
+	}
+
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+	
+	public void displayInfo() {
+		System.out.println("Hello, my name is : " + studentName);
+	}
+
+}

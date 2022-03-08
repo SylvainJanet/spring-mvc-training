@@ -1,0 +1,7 @@
+package springcoreapp.o2ioc;
+
+import java.io.Serializable;
+
+public class Employee implements Serializable{
+
+}

@@ -1,0 +1,8 @@
+package springcoreapp.o2ioc;
+
+// On manipule des POJO 
+// on a besoin de getters setters, d'un constructeur sans paramètres et 
+// implémente Serializable
+public class Student {
+
+}

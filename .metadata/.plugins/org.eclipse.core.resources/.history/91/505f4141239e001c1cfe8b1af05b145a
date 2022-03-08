@@ -1,0 +1,5 @@
+package springcoreapp.o2ioc;
+
+public class Employee {
+
+}

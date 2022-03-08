@@ -1,0 +1,10 @@
+package springcoreapp.o2ioc;
+
+public class App2 {
+
+	public static void main(String[] args) {
+		Student s = new Student();
+		s.displayInfo();
+	}
+
+}

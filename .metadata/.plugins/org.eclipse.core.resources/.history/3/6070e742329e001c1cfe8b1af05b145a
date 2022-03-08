@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Property permet de donner une valeur à une propriété en utilisant son 
+		setter -->
+	<bean id="studentbean" class="springcoreapp.o2ioc.Student">
+		<property name="studentName" value="Sylvain"></property>
+	</bean>
+
+	<bean id="employee" class="springcoreapp.o2ioc.Employee">
+		<constructor-arg value="Denis"></constructor-arg>
+		<constructor-arg value="10" type="long"></constructor-arg>
+	</bean>
+
+	<!--<bean id="employee" class="springcoreapp.o2ioc.Employee"> <constructor-arg 
+		value="10" type="long"></constructor-arg> </bean> -->
+
+	<bean id="addressBean" class="springcoreapp.o2ioc.Address">
+		<constructor-arg value="Paris"></constructor-arg>
+		<constructor-arg value="Ile-de-France"></constructor-arg>
+		<constructor-arg value="France"></constructor-arg>
+	</bean>
+
+	<bean id="citoyen" class="springcoreapp.o2ioc.Citoyen">
+		<constructor-arg value="2" type="long"></constructor-arg>
+		<constructor-arg value="Christian"></constructor-arg>
+		<constructor-arg>
+			<ref bean="addressBean" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="question" class="springcoreapp.o2ioc.Question">
+		<constructor-arg value="10" type="long"></constructor-arg>
+		<constructor-arg value="Definition de Java"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>Java est un langage de programmation</value>
+				<value>Java est une espèce de crustacés en voie d'extinction</value>
+				<value>Java n'existe pas</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="answer1" class="springcoreapp.o2ioc.Answer">
+		<constructor-arg value="1" type="long"></constructor-arg>
+		<constructor-arg
+			value="Java est un langage de programmation"></constructor-arg>
+		<constructor-arg value="Sylvain"></constructor-arg>
+	</bean>
+
+	<bean id="answer2" class="springcoreapp.o2ioc.Answer">
+		<constructor-arg value="2" type="long"></constructor-arg>
+		<constructor-arg value="Java n'existe pas"></constructor-arg>
+		<constructor-arg value="Denis"></constructor-arg>
+	</bean>
+
+	<bean id="question2"
+		class="springcoreapp.o2ioc.QuestionListAnswer">
+		<constructor-arg value="1" type="long"></constructor-arg>
+		<constructor-arg value="Definition de java"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref bean="answer1" />
+				<ref bean="answer2" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="question3" class="springcoreapp.o2ioc.QuestionMap">
+		<constructor-arg value="1" type="long"></constructor-arg>
+		<constructor-arg value="Definition de java"></constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="Java est un langage de programmation"
+					value="Sylvain"></entry>
+				<entry key="Java n'existe pas" value="Denis"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean id="user1" class="springcoreapp.o2ioc.User">
+		<constructor-arg value="1" type="long"></constructor-arg>
+		<constructor-arg value="Sylain"></constructor-arg>
+		<constructor-arg value="sjanet@jehann.fr"></constructor-arg>
+	</bean>
+
+	<bean id="user2" class="springcoreapp.o2ioc.User">
+		<constructor-arg value="2" type="long"></constructor-arg>
+		<constructor-arg value="Denis"></constructor-arg>
+		<constructor-arg value="denis@gmail.com"></constructor-arg>
+	</bean>
+
+	<bean id="question4" class="springcoreapp.o2ioc.QuestionMapUser">
+		<constructor-arg value="6" type="long"></constructor-arg>
+		<constructor-arg value="Definition de java"></constructor-arg>
+		<constructor-arg>
+			<map>
+				<!-- Si on veut injecter des beans dans les clés, on utilise key-ref 
+					avec l'id du bean qu'on souhaite utiliser <entry key-ref="idDuBean" value-ref="userId"> -->
+
+				<entry key="Java est un langage de programmation"
+					value-ref="user1" />
+				<entry key="Java n'existe pas" value-ref="user2" />
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean id="citoyen2" class="springcoreapp.o2ioc.Citoyen">
+		<constructor-arg value="29" type="long"></constructor-arg>
+		<constructor-arg value="Lionel">
+		</constructor-arg>
+	</bean>
+
+	<bean id="address"
+
+</beans>

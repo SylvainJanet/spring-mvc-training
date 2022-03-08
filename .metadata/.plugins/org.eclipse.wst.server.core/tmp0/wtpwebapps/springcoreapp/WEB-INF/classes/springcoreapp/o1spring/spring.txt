@@ -1,0 +1,28 @@
+Java EE : software qui permet le développement d'appli java avec certains outils et certaines normes qui permettent
+un développement à grande échelle. Spring est une solution qui permet de développer des applis JEE.
+
+Ce que spring permet de faire :
+
+- Programmation orientée aspect (non vu cette semaine) qui permet de séparer le traitement métier de certains traitement
+systématiques comme le log, la sécurité, ...
+
+- Spring permet l'inversion de controle.
+
+Injection de dépendance : si une classe dépend d'une autre, on ne code pas en dur la dépendance, on donne la 
+responsabilité à celui qui instancie la classe de spécifier les dépendances
+Injection de dépendance par constructeur, par setter....
+
+new EntityService(new EntityRepository())
+
+L'inversion de contrôle est une manière de faire de l'injection de dépendance. C'est un design pattern qui prend le contrôle
+de l'injection des dépendances
+
+https://static.javatpoint.com/images/sp/spmodules.jpg
+
+Le Spring Core Container créé, injecte et gère les dépendances, en utilisant un fichier de configuration.
+
+Le containeur spring contient plusieurs modules :
+
+- Core et Beans qui permettent entre autres l'IOC et l'injection de dépendance
+- Beans implémente le design pattern factory et il est responsable de l'instanciation des objets
+- Contexte permet de créer les modules Core et Beans et il permet d'accéder aux différents définis et configurés par eux

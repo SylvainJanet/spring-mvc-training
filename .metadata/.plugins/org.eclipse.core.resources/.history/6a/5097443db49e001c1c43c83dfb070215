@@ -1,0 +1,53 @@
+package springcoreapp.o2ioc;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App2 {
+
+	public static void main(String[] args) {
+		// Créer le contexte 
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		System.out.println("_____ IOC _____");
+		
+		Student student = context.getBean("studentbean", Student.class);
+		student.displayInfo();
+		
+		System.out.println("_____ Injection par constructeur _____");
+		
+		Employee employee = context.getBean("employee", Employee.class);
+		employee.show();
+		
+		System.out.println("_____ Injection par constructeur avec une dépendance Bean _____");
+		
+		Citoyen citoyen = context.getBean("citoyen",Citoyen.class);
+		citoyen.show();
+		
+		System.out.println("_____ Injection par constructeur avec une collection (List) _____");
+		Question question = context.getBean("question",Question.class);
+		question.displayInfo();
+		
+		System.out.println("_____ Injection par constructeur avec une collection (List) de Bean _____");
+		QuestionListAnswer question2 = context.getBean("question2",QuestionListAnswer.class);
+		question2.displayInfo();
+		
+		System.out.println("_____ Injection par constructeur avec une collection (Map)");
+		QuestionMap question3 = context.getBean("question3",QuestionMap.class);
+		question3.displayInfo();
+		
+		System.out.println("_____ Injection par constructeur avec une collection (Map) de Bean _____");
+		QuestionMapUser question4 = context.getBean("question4",QuestionMapUser.class);
+		question4.displayInfo();
+		
+		System.out.println("_____ Héritage de beans _____");
+//		Citoyen citoyen2 = context.getBean("citoyen2", Citoyen.class);
+		Citoyen citoyen3 = context.getBean("citoyen3", Citoyen.class);
+		
+//		citoyen2.show();
+		citoyen3.show();
+		
+		
+	}
+
+}
