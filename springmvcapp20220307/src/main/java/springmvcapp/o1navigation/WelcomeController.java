@@ -1,5 +1,6 @@
 package springmvcapp.o1navigation;
 
+import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -16,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class WelcomeController {
 
 	@RequestMapping(value = "", method = RequestMethod.GET)
-	public String welcome(Model model) {
-		model.addAttribute("message", "Hello Spring MVC Framework !");
+	public String welcome(Model model, Locale locale) {
+		model.addAttribute("message", "Hello Spring MVC Framework ! Locale : " + locale);
 		return "firstPage";
 	}
 
@@ -85,10 +86,14 @@ public class WelcomeController {
 			}
 		}
 		// key - value | key - value | key - value
-		
-		
+
 		model.addAttribute("messageFromVariables", msg);
 		return "pathVariablePage";
+	}
+	
+	@GetMapping(value = "/langage")
+	public String langagePage() {
+		return "langagePage";
 	}
 
 }

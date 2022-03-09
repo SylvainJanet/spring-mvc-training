@@ -11,5 +11,7 @@
 	<a href="${pageContext.request.contextPath}/app/modelUse">model use</a>
 	<br/>
 	<a href="${pageContext.request.contextPath}/app/pathVariable">path variables</a>
+	<br/>
+	<a href="${pageContext.request.contextPath}/app/langage">locale</a>
 </body>
 </html>
