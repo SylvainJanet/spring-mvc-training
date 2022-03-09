@@ -5827,3 +5827,88 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 17:11:06.233
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.QXuJxFAx => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:46.604
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:46.612
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@2a0a5865[org.springframework.tooling.boot.ls:1.24.0.202012131915(id=871)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:46.620
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:48.616
+!MESSAGE Boot LS startup time from start to initialized: 1988ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:48.689
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.WFFBFTriisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:48.704
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:48.713
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:48.721
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:48.729
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:48.736
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.WFFBFTri => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:48.743
+!MESSAGE classpath=66 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:48.752
+!MESSAGE buffering callback sts4.classpath.WFFBFTri springcoreapp false 66
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:48.759
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:48.766
+!MESSAGE classpath=20 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:48.773
+!MESSAGE buffering callback sts4.classpath.WFFBFTri designpatterns false 20
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:48.780
+!MESSAGE executing callback sts4.classpath.WFFBFTri 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 09:09:48.806
+!MESSAGE executing callback sts4.classpath.WFFBFTri SUCCESS [done]
+
+!ENTRY org.eclipse.wst.sse.core 4 4 2022-03-09 09:53:00.907
+!MESSAGE can not get a buffer without a document reference
+!STACK 0
+java.lang.IllegalArgumentException: can not get a buffer without a document reference
+	at org.eclipse.wst.sse.core.internal.FileBufferModelManager.getBuffer(FileBufferModelManager.java:691)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.getModelPath(JSPTranslator.java:3276)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.writeExternal(JSPTranslator.java:3383)
+	at java.base/java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1471)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1442)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1187)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:353)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslatorPersister.persistTranslator(JSPTranslatorPersister.java:265)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslatorPersister.persistTranslation(JSPTranslatorPersister.java:149)
+	at org.eclipse.jst.jsp.core.internal.java.search.JSPIndexManager.performAction(JSPIndexManager.java:139)
+	at org.eclipse.wst.sse.core.indexing.AbstractIndexManager$ResourceEventProcessingJob$1.run(AbstractIndexManager.java:1561)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.wst.sse.core.indexing.AbstractIndexManager$ResourceEventProcessingJob.run(AbstractIndexManager.java:1559)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2022-03-09 10:09:45.149
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:43:07.378
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WFFBFTri
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:43:07.378
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.WFFBFTri
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:43:07.379
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:43:07.379
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WFFBFTri => OK
