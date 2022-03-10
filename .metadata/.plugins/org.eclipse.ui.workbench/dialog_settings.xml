@@ -3,7 +3,15 @@
 	<section name="NewWizardAction">
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.m2e.core.wizards.Maven2ProjectWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.fx.ide"/>
+			<item value="org.eclipse.fx.ide/org.eclipse.fx.ide.clazz"/>
 			<item value="org.eclipse.m2e"/>
+			<item value="org.eclipse.wb"/>
+			<item value="org.eclipse.wb/org.eclipse.wb.rcp"/>
+			<item value="org.eclipse.wb/org.eclipse.wb.rcp/org.eclipse.wb.rcp.forms"/>
+			<item value="org.eclipse.xtext.projectwiz"/>
+			<item value="org.eclipse.ui.Examples"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.xtext.ui.Examples"/>
 		</list>
 	</section>
 </section>

@@ -13,5 +13,7 @@
 	<a href="${pageContext.request.contextPath}/app/pathVariable">path variables</a>
 	<br/>
 	<a href="${pageContext.request.contextPath}/app/langage">locale</a>
+	<br/>
+	<a href="${pageContext.request.contextPath}/app/user">formData</a>
 </body>
 </html>

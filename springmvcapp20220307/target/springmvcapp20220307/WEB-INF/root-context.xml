@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/mvc
+     http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- Etape 3 : Activer la configuration par annotation -->
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<context:component-scan
+		base-package="springmvcapp"></context:component-scan>
+
+	<!-- Etape 4 : Définir et configurer le View Resolver -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+	<!-- Dans le controleur, on renverra le nom de la page, et le View Resolver 
+		ajoute le prefix et le suffix au nom pour trouver la page -->
+
+	<!-- Etape 5 (si besoin) : Configurer les ressources (images, js, css,...) -->
+
+	<mvc:resources location="/assets" mapping="/assets/**"></mvc:resources>
+
+	<!-- LocaleChangeInterceptor va être responsable de la détection du changement 
+		de langue Un intercepteur permet de filtrer les requêtes avant qu'elle ne 
+		soit passée au controleur Ici, l'intercepteur vérifie si un changement de 
+		locale est effectué via un paramètre -->
+	<mvc:interceptors>
+		<bean 
+			class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<property name="paramName" value="lang"></property>
+		</bean>
+	</mvc:interceptors>
+
+	<!-- Définir une locale par défaut via le LocaleResolver -->
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="defaultLocale" value="fr"></property>
+	</bean>
+
+	<bean
+	id = "messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:messages" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+	
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+	<property name="validationMessageSource" ref="messageSource"></property>
+	</bean>
+</beans>

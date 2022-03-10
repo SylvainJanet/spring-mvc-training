@@ -20,6 +20,8 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<springframework.version>5.3.15</springframework.version>
 		<jstl.version>1.2</jstl.version>
+		<javax.inject.version>1</javax.inject.version>
+		<hibernate-validator.version>6.2.2.Final</hibernate-validator.version>
 	</properties>
 
 	<dependencies>
@@ -38,6 +40,17 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>${jstl.version}</version>
+		</dependency>
+		<!-- @Inject -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>${javax.inject.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate-validator.version}</version>
 		</dependency>
 	</dependencies>
 

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=springcoreapp/C:\/Program Files\/Java\/jre1.8.0_271\/lib\/rt.jar=/maven.pomderived=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.io(Serializable.class[Serializable" modifiers="1537" timestamp="1610291410841"/>
+    <typeInfo handle="=springcoreapp/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;springcoreapp.o3annotations{Formateur.java[Formateur" modifiers="1025" timestamp="1646747294980"/>
+    <typeInfo handle="=designpatterns/src&lt;designpatterns{Publisher.java[Publisher" modifiers="513" timestamp="1646751775763"/>
 </typeInfoHistroy>

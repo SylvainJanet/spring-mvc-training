@@ -11,7 +11,7 @@
      http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<!-- Etape 3 : Activer la configuration par annotation -->
-	<mvc:annotation-driven></mvc:annotation-driven>
+	<mvc:annotation-driven validator="validator"></mvc:annotation-driven>
 	<context:component-scan
 		base-package="springmvcapp"></context:component-scan>
 
@@ -34,7 +34,7 @@
 		soit passée au controleur Ici, l'intercepteur vérifie si un changement de 
 		locale est effectué via un paramètre -->
 	<mvc:interceptors>
-		<bean 
+		<bean
 			class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
 			<property name="paramName" value="lang"></property>
 		</bean>
@@ -46,10 +46,14 @@
 		<property name="defaultLocale" value="fr"></property>
 	</bean>
 
-	<bean
-	id = "messageSource"
+	<bean id="messageSource"
 		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="basename" value="classpath:messages" />
 		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource" />
 	</bean>
 </beans>

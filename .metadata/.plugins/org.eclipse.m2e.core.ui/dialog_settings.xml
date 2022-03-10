@@ -27,16 +27,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="springcoreapp"/>
-			<item value="org.springcore"/>
+			<item value="springmvcapp"/>
 		</list>
 		<list key="groupId">
 			<item value="fr.dawan.cours"/>
-			<item value="springcore"/>
 		</list>
 		<list key="artifactId">
-			<item value="springcoreapp"/>
-			<item value="springcore"/>
+			<item value="springmvcapp20220307"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -71,6 +68,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\Admin stagiaire.DESKTOP-8967908\Desktop\MesFormations\FormationSpringMVCInitiationApprofondissement\work\2022_03_07\Formation20220307\springmvcapp"/>
+			<item value="C:\Users\Admin stagiaire.DESKTOP-8967908\Desktop\MesFormations\FormationSpringMVCInitiationApprofondissement\work\2022_03_07\Formation20220307\springcoreapp"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
