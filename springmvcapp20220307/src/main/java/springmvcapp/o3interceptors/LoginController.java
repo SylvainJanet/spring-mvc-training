@@ -24,8 +24,9 @@ public class LoginController {
 	}
 
 	@GetMapping("")
-	public String login(Model model) {
-		model.addAttribute("loginForm", new LoginForm());
+	public String login(Model model, HttpServletRequest request) {
+		String redirectUri = request.getParameter("redirect");
+		model.addAttribute("loginForm", new LoginForm(redirectUri));
 		return "loginPage";
 	}
 
@@ -42,8 +43,15 @@ public class LoginController {
 		// ...
 		HttpSession session = request.getSession();
 		if (session.getAttribute("userInfo") != null) {
-			((UserInfo) session.getAttribute("userInfo")).setConnected(true);
-			((UserInfo) session.getAttribute("userInfo")).setUsername(loginForm.getUsername());
+			UserInfo userInfo = ((UserInfo) session.getAttribute("userInfo"));
+			userInfo.setConnected(true);
+			userInfo.setUsername(loginForm.getUsername());
+//			if (userInfo.getRedirect() != null && !userInfo.getRedirect().isEmpty()) {
+//				return "redirect:" + userInfo.getRedirect();
+//			}
+			if (loginForm.getRedirect() != null && !loginForm.getRedirect().isEmpty()) {
+				return "redirect:" + loginForm.getRedirect();
+			}
 		} else {
 			session.setAttribute("userInfo", getUserInfo());
 		}

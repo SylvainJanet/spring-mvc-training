@@ -8,26 +8,40 @@ public class LoginForm {
 	private String username;
 	@NotBlank()
 	private String password;
+
+	private String redirect;
+
 	public LoginForm() {
 		super();
 	}
-	public LoginForm(String username, String password) {
+
+	public LoginForm(String redirect) {
 		super();
-		this.username = username;
-		this.password = password;
+		this.redirect = redirect;
 	}
+
 	public String getUsername() {
 		return username;
 	}
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
+
+	public String getRedirect() {
+		return redirect;
+	}
+
+	public void setRedirect(String redirect) {
+		this.redirect = redirect;
+	}
+
 }

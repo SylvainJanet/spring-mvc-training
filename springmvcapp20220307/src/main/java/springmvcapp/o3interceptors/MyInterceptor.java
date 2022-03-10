@@ -1,5 +1,7 @@
 package springmvcapp.o3interceptors;
 
+import java.util.stream.Stream;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -16,16 +18,27 @@ public class MyInterceptor implements HandlerInterceptor {
 			throws Exception {
 //		System.out.println("Requested URL : " + request.getRequestURL());
 		HttpSession session = request.getSession();
-		UserInfo userInfo = (UserInfo)session.getAttribute("userInfo");
+		UserInfo userInfo = (UserInfo) session.getAttribute("userInfo");
+		if (userInfo == null) {
+			session.setAttribute("userInfo", new UserInfo());
+		}
 		boolean isConnected = userInfo != null && userInfo.isConnected();
-		
+
 		if (isConnected || request.getRequestURI().contains("login")) {
 			return true;
 		} else {
-
+// /springmvcapp/app/user
+			String[] uriSplit = request.getRequestURI().split("/");
+			if (uriSplit.length > 2) {
+				String uriToRedirect = Stream.of(uriSplit).skip(2).reduce("", (s1, s2) -> s1 + "/" + s2) +"/";
+				// /app/user
+//				((UserInfo) session.getAttribute("userInfo")).setRedirect(uriToRedirect);
+				response.sendRedirect(request.getContextPath() + "/app/login?redirect=" + uriToRedirect);
+			} else {
 			response.sendRedirect(request.getContextPath() + "/app/login");
+			}
 		}
-		
+
 		return HandlerInterceptor.super.preHandle(request, response, handler);
 	}
 

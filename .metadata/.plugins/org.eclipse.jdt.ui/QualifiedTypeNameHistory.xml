@@ -14,7 +14,6 @@
     <fullyQualifiedTypeName name="springcoreapp.o2ioc.Employee"/>
     <fullyQualifiedTypeName name="springcoreapp.o2ioc.Address"/>
     <fullyQualifiedTypeName name="springcoreapp.o2ioc.Citoyen"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="springcoreapp.o2ioc.Question"/>
     <fullyQualifiedTypeName name="springcoreapp.o2ioc.QuestionListAnswer"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
@@ -25,7 +24,6 @@
     <fullyQualifiedTypeName name="org.springframework.context.annotation.PropertySource"/>
     <fullyQualifiedTypeName name="designpatterns.MyPublisher"/>
     <fullyQualifiedTypeName name="designpatterns.MyListener"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="designpatterns.exemples.PriceUpdateEvent"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
@@ -51,4 +49,12 @@
     <fullyQualifiedTypeName name="javax.validation.constraints.NotBlank"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.SessionAttributes"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.HandlerInterceptor"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collector"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.compiler.sym"/>
+    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
 </qualifiedTypeNameHistroy>

@@ -17,6 +17,7 @@
 	<form:errors path="password" cssClass="error" />
 	<br>
 	<br>
+	<form:hidden path="redirect"/>
 	<input type="submit" value="Submit" />
 </form:form>
 <br>
