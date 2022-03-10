@@ -11,6 +11,7 @@ public class User {
 	@NotBlank(message = "{error.name.empty}")
 	@Size(min = 2, max = 20, message = "{error.name.size}")
 	@Pattern(regexp="^[\\p{Alnum}\\s]+$", message="{error.name.characters}")
+	@CapitalizedConstraint(message = "{error.name.capitalization}")
 	private String name;
 
 

@@ -1,6 +1,5 @@
 package springmvcapp.o2formData;
 
-
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -38,4 +37,23 @@ public class UserController {
 		model.addAttribute("user", new User(id, name));
 		return "formDataPage";
 	}
+
+	@GetMapping("/signup")
+	public String signup(Model model) {
+		model.addAttribute("accountCreation", new AccountCreation());
+		return "accountCreationPage";
+
+	}
+
+	@PostMapping("/createAccount")
+	public String createAccount(@Valid @ModelAttribute(name = "accountCreation") AccountCreation account,
+			BindingResult results, Model model) {
+		if (results.hasErrors()) {
+			model.addAttribute("accountCreation", account);
+			return "accountCreationPage";
+		}
+		model.addAttribute("message", "Account with email " + account.getEmail() + " created");
+		return "firstPage";
+	}
+
 }
