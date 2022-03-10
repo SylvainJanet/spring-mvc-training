@@ -7,7 +7,7 @@ public class MyListener implements Listener {
 		System.out.println("Value has been updated !");
 		System.out.println("Old value : " + oldValue);
 		System.out.println("New value : " + newValue);
-		
+
 	}
 
 }
