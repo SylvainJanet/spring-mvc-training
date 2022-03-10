@@ -38,6 +38,9 @@
 			class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
 			<property name="paramName" value="lang"></property>
 		</bean>
+		<bean id="logInterceptor"
+			class="springmvcapp.o3interceptors.MyInterceptor">
+		</bean>
 	</mvc:interceptors>
 
 	<!-- Définir une locale par défaut via le LocaleResolver -->

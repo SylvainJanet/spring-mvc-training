@@ -17,5 +17,9 @@
 	<a href="${pageContext.request.contextPath}/app/user">formData</a>
 <br/>
 	<a href="${pageContext.request.contextPath}/app/user/signup">custom class validation annotation</a>
+	<br/>
+	<a href="${pageContext.request.contextPath}/app/login">login</a>
+	<br/>
+	<a href="${pageContext.request.contextPath}/app/login/logout">logout</a>
 </body>
 </html>
