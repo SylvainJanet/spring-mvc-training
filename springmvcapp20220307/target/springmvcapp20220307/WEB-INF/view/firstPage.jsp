@@ -15,5 +15,19 @@
 	<a href="${pageContext.request.contextPath}/app/langage">locale</a>
 	<br/>
 	<a href="${pageContext.request.contextPath}/app/user">formData</a>
+<br/>
+	<a href="${pageContext.request.contextPath}/app/user/signup">custom class validation annotation</a>
+	<br/>
+	<a href="${pageContext.request.contextPath}/app/login">login</a>
+	<br/>
+	<a href="${pageContext.request.contextPath}/app/login/logout">logout</a>
+	<br/>
+	<a href="${pageContext.request.contextPath}/app/exception/1">Exception 1</a>
+	<a href="${pageContext.request.contextPath}/app/exception/2">2</a>
+	<a href="${pageContext.request.contextPath}/app/exception/3">3</a>
+	<br/>
+	<a href="${pageContext.request.contextPath}/app/files/download">download</a>
+	<br/>
+	<a href="${pageContext.request.contextPath}/app/files/upload">upload</a>
 </body>
 </html>

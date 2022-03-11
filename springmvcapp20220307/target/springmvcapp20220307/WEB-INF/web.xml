@@ -7,7 +7,7 @@
 	
 	<!-- Configuration Spring MVC -->
 	
-	<!-- Etape 1 : Configurer le Dispatcher Servlet -->
+	<!-- Etape 1 : Configurer le Dispatcher Servlet --> 
 	
 	<servlet>
 		<servlet-name>MyDispatcher</servlet-name>
